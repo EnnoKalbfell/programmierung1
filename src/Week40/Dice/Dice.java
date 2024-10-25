@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Dice {
     private int numberOfSides;
+    private static Random rnd = new Random();
 
     public Dice(int sides) {
         this.numberOfSides = sides;
@@ -19,7 +20,6 @@ public class Dice {
     }
 
     public int rollDice() {
-        Random rnd = new Random();
-        return rnd.nextInt(numberOfSides) + 1;
+        return this.rnd.nextInt(numberOfSides) + 1;
     }
 }
