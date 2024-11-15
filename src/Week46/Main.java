@@ -9,11 +9,11 @@ public class Main {
     public static String extendString(String str, int len) {
         if (str.length() < len) {
             int zerosToAdd = len - str.length();
-            StringBuilder sb = new StringBuilder(str);
+            String result = str;
             for (int i = 0; i < zerosToAdd; i++) {
-                sb.append('0');
+                result += '0';
             }
-            return sb.toString();
+            return result;
         }
         return str;
     }
